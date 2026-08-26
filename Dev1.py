@@ -1,3 +1,5 @@
+#Code généré avec IA pour voir plus
+
 # Example: Taking input from the user in Python
 
 try:
