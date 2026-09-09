@@ -7,4 +7,3 @@ print(f"|{animal1:^12}|")
 print(f"|{animal2:^12}|")
 print(f"|{animal3:^12}|")
 print("--------------")
-try
