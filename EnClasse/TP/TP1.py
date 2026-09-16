@@ -44,25 +44,67 @@ mois = age % 12
 # tableau de résultat
 score_vita = 100
 
+maturite = ""
+
 match espece:
     case 1:
         if masse_kg < 60.0 or masse_kg > 150.0 :
             score_vita -= 20
         if temp_c < 22.0 or temp_c > 26.0 :
             score_vita -= 30
+        if age < 60 :
+            maturite = "juvénile"
+        elif age >= 60 and age < 240 :
+            maturite = "Adulte"
+        elif age >= 240 :
+            maturite = "Senior"
+            
     case 2:
         if masse_kg < 60.0 or masse_kg > 150.0 :
             score_vita -= 20
         if temp_c < 22.0 or temp_c > 26.0 :
             score_vita -= 30
+        if age < 36 :
+            maturite = "juvénile"
+        elif age >= 36 and age < 144 :
+            maturite = "Adulte"
+        elif age >= 144 :
+            maturite = "Senior"
+            
     case 3:
         if masse_kg < 60.0 or masse_kg > 150.0 :
             score_vita -= 20
         if temp_c < 22.0 or temp_c > 26.0 :
             score_vita -= 30
+        if age < 36 :
+            maturite = "juvénile"
+        elif age >= 36 and age < 180 :
+            maturite = "Adulte"
+        elif age >= 180 :
+            maturite = "Senior"
+            
+            
+intro1 = "CLINIQUE VÉTÉRINAIRE EXOTIQUE"
+intro2 = "DES ÎLES ST-MAURICE"
+
+print("=" * 60)
+
+print(f" {intro1:^58} ")
+
+print(f" {intro2:^58} ")
+
+print("=" * 60)
+
+print(f"Patient : {animal}")
+
+print(f"Âge : {annee} ans et {mois} mois ({maturite})")
+
+print(f"Saisie : Masse en lbs, température en °F")
+
+print("-" * 60)
 
 
-print({score_vita})
 
+print("-" * 60)
 
 

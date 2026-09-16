@@ -1,6 +1,7 @@
-mois = int(input("Entrez un nombre de mois : "))
+intro1 = "CLINIQUE VÉTÉRINAIRE EXOTIQUE"
+intro2 = "DES ÎLES ST-MAURICE"
 
-annee = mois // 12
-mois2 = mois % 12
-
-print(f"{mois} fais exactement {annee} ans et {mois2} mois")
+print("=" * 60)
+print(f" {intro1:^58} ")
+print(f" {intro2:^58} ")
+print("=" * 60)
