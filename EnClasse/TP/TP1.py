@@ -40,14 +40,24 @@ temp_c = ( temperature - 32) * ( 5 / 9 )
 annee = age // 12
 mois = age % 12
 
+
 # ---------------------------------------------------------------------------
 # tableau de résultat
 score_vita = 100
 
 maturite = ""
 
+sorte = ""
+
+norme_temp = ""
+norme_mass = ""
+
 match espece:
     case 1:
+        sorte = "requin"
+        norme_temp = "22.0-26.0"
+        norme_mass = "60.0-150.0"
+
         if masse_kg < 60.0 or masse_kg > 150.0 :
             score_vita -= 20
         if temp_c < 22.0 or temp_c > 26.0 :
@@ -60,6 +70,10 @@ match espece:
             maturite = "Senior"
             
     case 2:
+        sorte = "tigre"
+        norme_temp = "37.5-39.0"
+        norme_mass = "100.0-260.0"
+
         if masse_kg < 60.0 or masse_kg > 150.0 :
             score_vita -= 20
         if temp_c < 22.0 or temp_c > 26.0 :
@@ -72,6 +86,10 @@ match espece:
             maturite = "Senior"
             
     case 3:
+        sorte = "gnou"
+        norme_temp = "37.5-39.0"
+        norme_mass = "120.0-270.0"
+
         if masse_kg < 60.0 or masse_kg > 150.0 :
             score_vita -= 20
         if temp_c < 22.0 or temp_c > 26.0 :
@@ -95,15 +113,15 @@ print(f" {intro2:^58} ")
 
 print("=" * 60)
 
-print(f"Patient : {animal}")
-
-print(f"Âge : {annee} ans et {mois} mois ({maturite})")
-
-print(f"Saisie : Masse en lbs, température en °F")
+print(f"Patient :{animal} ({sorte})")
+print(f"Âge :{annee} ans et {mois} mois ({maturite})")
+print(f"Saisie :Masse en lbs, température en °F")
 
 print("-" * 60)
 
-
+print("mesure valeur norme")
+print(f"tempéranture (°C) {temp_c:.2f} {norme_temp}")
+print(f"Masse (KG) {masse_kg:.2f} {norme_mass}")
 
 print("-" * 60)
 
