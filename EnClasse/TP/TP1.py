@@ -31,7 +31,7 @@ print(f"Température corporelle de l'animal (en °F) : {temperature}")
 #convertir mes données
 
 # livre en kilo
-masse_kg = masse * 0.45
+masse_kg = masse * 0.453592
 
 #Faren en celcsius
 temp_c = ( temperature - 32) * ( 5 / 9 )
@@ -52,6 +52,10 @@ sorte = ""
 norme_temp = ""
 norme_mass = ""
 
+verdict = "Normal"
+
+limite = "non"
+
 match espece:
     case 1:
         sorte = "requin"
@@ -62,12 +66,21 @@ match espece:
             score_vita -= 20
         if temp_c < 22.0 or temp_c > 26.0 :
             score_vita -= 30
+            
         if age < 60 :
             maturite = "juvénile"
         elif age >= 60 and age < 240 :
             maturite = "Adulte"
         elif age >= 240 :
             maturite = "Senior"
+            
+        if temp_c < 26.0 and temp_c > 22.0 :
+            verdict = "urgence"
+            
+        if math.isclose(masse_kg, 150.0) :
+            limite = "oui"
+        if math.isclose(temp_c, 26.0) :
+            limite = "oui"
             
     case 2:
         sorte = "tigre"
@@ -84,7 +97,14 @@ match espece:
             maturite = "Adulte"
         elif age >= 144 :
             maturite = "Senior"
-            
+        if temp_c < 26.0 and temp_c > 22.0 :
+            verdict = "urgence"
+
+        if math.isclose(masse_kg, 260.0) :
+            limite = "oui"
+        if math.isclose(temp_c, 39.0) :
+            limite = "oui"
+
     case 3:
         sorte = "gnou"
         norme_temp = "37.5-39.0"
@@ -100,10 +120,25 @@ match espece:
             maturite = "Adulte"
         elif age >= 180 :
             maturite = "Senior"
+        
+        if math.isclose(masse_kg, 270.0) :
+            limite = "oui"
+        if math.isclose(temp_c, 39.0) :
+            limite = "oui"
             
-            
+#--------------------------------------------------------
+#final
+
 intro1 = "CLINIQUE VÉTÉRINAIRE EXOTIQUE"
 intro2 = "DES ÎLES ST-MAURICE"
+
+if score_vita < 100:
+    verdict = "surveillance"
+    
+if score_vita <= 50:
+    verdict = "urgence"
+    
+
 
 print("=" * 60)
 
@@ -125,4 +160,18 @@ print(f"Masse (KG) {masse_kg:.2f} {norme_mass}")
 
 print("-" * 60)
 
+print("conversion")
+print(f"masse : {masse} lbs = {masse_kg:.2f} Kg" )
+print(f"Température : {temperature} °F = {temp_c:.2f} °C")
+
+print("-" * 60)
+
+print(f"mesure a la limte :{limite}")
+
+print("-" * 60)
+
+print(f"indice de vitalité : {score_vita}/100")
+print(f" VERDICT : {verdict}")
+
+print("=" * 60)
 
