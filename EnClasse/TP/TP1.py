@@ -138,8 +138,8 @@ if score_vita < 100:
 if score_vita <= 50:
     verdict = "urgence"
     
-
-
+#----------------------------------------------------------------
+#Affichage final avec valeur de l'animal
 print("=" * 60)
 
 print(f" {intro1:^58} ")
@@ -154,7 +154,7 @@ print(f"Saisie :Masse en lbs, température en °F")
 
 print("-" * 60)
 
-print("mesure valeur norme")
+print("mesure  valeur  norme")
 print(f"tempéranture (°C) {temp_c:.2f} {norme_temp}")
 print(f"Masse (KG) {masse_kg:.2f} {norme_mass}")
 
@@ -175,3 +175,8 @@ print(f" VERDICT : {verdict}")
 
 print("=" * 60)
 
+#problème avec le programme
+#1, affichage final pas comme demander
+#2, mesure a la limite ne fonctionne pas correctement
+# si possible, je voudrais prendre un 10 min avec professeur pour repasser sur
+# ces points pour savoir ou étais le problème
