@@ -3,6 +3,9 @@
 # TP1-clinique vétérinaire exotique
 
 import math
+import datetime
+from colorama import Fore, Back, Style, init
+init(autoreset=True)
 
 #Info sur l'animal
 animal = input("Entrer le nom de l'animal : ")
@@ -64,7 +67,7 @@ match espece:
 
         if masse_kg < 60.0 or masse_kg > 150.0 :
             score_vita -= 20
-        if temp_c < 22.0 or temp_c > 26.0 :
+        if temp_c < 21.0 or temp_c > 26.0 :
             score_vita -= 30
             
         if age < 60 :
@@ -125,18 +128,21 @@ match espece:
             limite = "oui"
         if math.isclose(temp_c, 39.0) :
             limite = "oui"
+        if maturite == "Senior" and masse_kg < 60.0 or masse_kg > 150.0 :
+            score_vita = 50
             
 #--------------------------------------------------------
 #final
+
+Date = datetime.datetime.now()
 
 intro1 = "CLINIQUE VÉTÉRINAIRE EXOTIQUE"
 intro2 = "DES ÎLES ST-MAURICE"
 
 if score_vita < 100:
     verdict = "surveillance"
-    
-if score_vita <= 50:
-    verdict = "urgence"
+elif score_vita >= 50 :
+    verdict = "Urgence"
     
 #----------------------------------------------------------------
 #Affichage final avec valeur de l'animal
@@ -148,6 +154,7 @@ print(f" {intro2:^58} ")
 
 print("=" * 60)
 
+print(f"Date des saisies : {Date.strftime("%A, %d %B %Y")}")
 print(f"Patient :{animal} ({sorte})")
 print(f"Âge :{annee} ans et {mois} mois ({maturite})")
 print(f"Saisie :Masse en lbs, température en °F")
@@ -174,6 +181,8 @@ print(f"indice de vitalité : {score_vita}/100")
 print(f" VERDICT : {verdict}")
 
 print("=" * 60)
+
+print(f"{Date.strftime("???? Bilan produit à: %H:%M"):>60}")
 
 #problème avec le programme
 #1, affichage final pas comme demander
