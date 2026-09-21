@@ -28,7 +28,7 @@
 # else:
 #     print("Mot de passe trop court")
 #---------------------------------------------------
-#Éxercice 4
+#Éxercice 4 / marche
 # Unite = int(input("Veuiller rentrer un nombre entier : "))
 
 # if Unite % 3 == 0 :
@@ -36,12 +36,12 @@
 # else:
 #     print("Pas un multiple de 3")
 #------------------------------------------------------
-#Éxercice 5
-Cote_a = int(input("Entrer le premier coté de votre triangle : "))
-Cote_b = int(input("Entrer le deuxieme coté de votre triangle : "))
-Cote_c = int(input("Entrer le troisieme coté de votre triangle : "))
+#Éxercice 5 / marche
+# Cote_a = int(input("Entrer le premier coté de votre triangle : "))
+# Cote_b = int(input("Entrer le deuxieme coté de votre triangle : "))
+# Cote_c = int(input("Entrer le troisieme coté de votre triangle : "))
 
-if Cote_a == Cote_b or Cote_a == Cote_b or Cote_c == Cote_a :
-    print("Triangle isocèle")
-else:
-    print("Triangle Scalène")
+# if Cote_a == Cote_b or Cote_a == Cote_b or Cote_c == Cote_a :
+#     print("Triangle isocèle")
+# else:
+#     print("Triangle Scalène")
