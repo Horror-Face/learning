@@ -1,10 +1,14 @@
+#création liste
+epicerie = []
+#append rajoute des valeur
+epicerie.append("lait")
+epicerie.append("pain")
+epicerie.append("œufs")
+
+print(epicerie)              # ['lait', 'pain', 'œufs']
+
+#remove retire une valeur
+epicerie.remove("pain")
+print(epicerie)   
 
 
-sac = ["gourde", "livre"]
-sac.append("crayon")
-sac.insert(1, "lunch")
-sac.remove("livre")
-sac[0] = "bouteille"
-objet = sac.pop()
-sac.append(objet.upper())
-print(sac)
