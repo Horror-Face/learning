@@ -1,5 +1,5 @@
 import random
-from donnees_tp2 import LISTE_PAYS, LISTE_CAPITALES
+from TP2.donnees_tp2 import LISTE_PAYS, LISTE_CAPITALES
 
 #CONSTANTE
 #############
@@ -21,3 +21,7 @@ rejouer = True
 
 # Une seule initialisation du générateur, avant la toute premiere partir
 random.seed(GRAINE )
+
+#Fonction
+
+
