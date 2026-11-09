@@ -1,5 +1,6 @@
 import random
-from TP2.donnees_tp2 import LISTE_PAYS, LISTE_CAPITALES
+from donnees_tp2 import PAYS, CAPITALES_PAYS
+import utilitaires
 
 #CONSTANTE
 #############
@@ -34,6 +35,8 @@ for i in range(len(liste_de_niveau)):
 
 #def afficher_menu
 
-afficher_menu("NIVEAU" )
+#afficher_menu("NIVEAU" )
 
+david = utilitaires.lire_texte("Quel est le message?")
+print(david)
 
