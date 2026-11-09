@@ -37,6 +37,5 @@ for i in range(len(liste_de_niveau)):
 
 #afficher_menu("NIVEAU" )
 
-david = utilitaires.lire_texte("Quel est le message?")
-print(david)
+
 
