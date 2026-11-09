@@ -81,6 +81,35 @@ def lire_oui_non(message):
     return reponse == "o"
 
 
+#lire texte #######################################
+
+def lire_texte(message):
+    valide = False
+    while not valide:
+        try:
+            texte = input(message).strip()
+            if texte != "":
+                valide = True
+            else:
+                print(f"Erreur : Entrer un mot.")
+        except ValueError:
+            print("Erreur : ce n'est pas un texte.")
+    return texte
+
+
+
+
+
+
+#normalisr#####################################################
+
+#def normaliser(texte):
+
+
+
+
+
+
 # Tests rapides : exécutés seulement si on lance ce fichier directement,
 # jamais lorsqu'il est importé par un autre fichier.
 if __name__ == "__main__":
