@@ -23,5 +23,17 @@ rejouer = True
 random.seed(GRAINE )
 
 #Fonction
+liste_de_niveau = ["facile", "moyen", "difficile"]
+liste_question = [5, 10, 15]
+
+liste_mode = []
+liste_option_niveau = []
+for i in range(len(liste_de_niveau)):
+    option_courante = f"{i+1} - {liste_de_niveau[i]}"
+    liste_option_niveau.append(option_courante)
+
+#def afficher_menu
+
+afficher_menu("NIVEAU" )
 
 
