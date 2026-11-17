@@ -1,12 +1,3 @@
-"""Fonctions utilitaires de saisie validée et de traitement de texte.
-
-Module de départ du TP2 : il reprend tel quel le fichier utilitaires.py du
-Cours 07 (Café Le Binaire). Vous devez le compléter selon l'énoncé.
-
-Auteur(s) : __________ et __________
-Date      : __________
-"""
-
 # ---------------------------------------------------------------------------
 # À FAIRE (voir l'énoncé, section « Fonctions obligatoires ») :
 #   1. Afficher EN ROUGE les messages d'erreur de lire_entier() et de
@@ -15,6 +6,15 @@ Date      : __________
 #   3. Ajouter la fonction normaliser(texte).
 #   4. Documenter les nouvelles fonctions (docstring au format Google).
 # ---------------------------------------------------------------------------
+
+from colorama import Fore, init
+
+init(autoreset=True)
+
+# Constantes pour normaliser(), associées par l'index
+LETTRES_AVEC_ACCENT = "àâäéèêëîïôöùûüÿç-"
+LETTRES_SANS_ACCENT = "aaaeeeeiioouuuyc "
+
 
 
 def lire_entier(message, minimum=0, maximum=99):
@@ -102,8 +102,11 @@ def lire_texte(message):
 
 
 #normalisr#####################################################
-
-#def normaliser(texte):
+def normaliser(texte):
+    resultat = texte.strip().lower()
+    for i in range(len(LETTRES_AVEC_ACCENT)):
+        resultat = resultat.replace(LETTRES_AVEC_ACCENT[i], LETTRES_SANS_ACCENT[i])
+    return resultat
 
 
 
