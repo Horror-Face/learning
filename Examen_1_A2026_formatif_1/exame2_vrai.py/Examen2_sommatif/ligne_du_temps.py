@@ -172,8 +172,8 @@ def main():
     resultats = []
 
     afficher_bienvenue()
-    random.seed(SEMENCE)
-
+    random.seed()
+#ajouter semence : random.seed(SEMENCE)
     rejouer = True
     while rejouer:
         print()
